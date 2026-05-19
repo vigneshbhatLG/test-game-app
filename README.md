@@ -3,6 +3,11 @@ This is for testing PC tool.
 
 Once after adding and setting up tv in PC tool :
 
+run:
+ares-package <file_name>
+
+ares-install -d <device_name> <file_name.ipk>
+
 Add com.game.gamepac --> AppId
 
 Add Level1->level5 --> contentId (which ever levels you want to fire to webostv)
