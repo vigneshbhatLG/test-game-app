@@ -7,13 +7,13 @@ Add com.game.gamepac --> AppId
 
 Add Level1->level5 --> contentId (which ever levels you want to fire to webostv)
 
-#Configuration in PC tool Before you add the game
+# Configuration in PC tool Before you add the game
 
-#1. In file TestDevicePopup.jsx 
+1. In file TestDevicePopup.jsx 
 
 Pathh --> deep-link-pc-tool/app/src/components/TestDevicePopup/TestDevicePopup.js
 
-## Lines: 115–128
+Lines: 115–128
 
 ## It's in key value format:
 
@@ -29,4 +29,4 @@ const cmdEscapedParams = jsonParams.replace(/"/g, '\\"');
 ...
 const command = `ares-launch --device "${deviceName}" "${appId}" && ares-launch --device "${deviceName}" "${appId}" -p "${cmdEscapedParams}"`;
 
-## The JSON format ({"contentId":"level3"}) is required because ares-launch -p only accepts JSON, not key=value pairs.
+# The JSON format ({"contentId":"level3"}) is required because ares-launch -p only accepts JSON, not key=value pairs.
