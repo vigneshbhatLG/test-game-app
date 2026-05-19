@@ -34,4 +34,4 @@ const cmdEscapedParams = jsonParams.replace(/"/g, '\\"');
 
 const command = `ares-launch --device "${deviceName}" "${appId}" && ares-launch --device "${deviceName}" "${appId}" -p "${cmdEscapedParams}"`;
 
-# The JSON format ({"contentId":"level3"}) is required because ares-launch -p only accepts JSON, not key=value pairs.
+The JSON format ({"contentId":"level3"}) is required because ares-launch -p only accepts JSON, not key=value pairs.
