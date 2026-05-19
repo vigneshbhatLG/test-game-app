@@ -18,15 +18,20 @@ Lines: 115–128
 ## It's in key value format:
 
 const escapedContentId = contentId.replace(/"/g, '\\"');
+
 ...
+
 const command = `ares-launch --device "${deviceName}" -c "${appId}" ; ares-launch --device "${deviceName}" "${appId}" -p "contentId=${escapedContentId}"`;
 
 
 ## Change it to:
+
 const jsonParams = JSON.stringify({ contentId });
 
 const cmdEscapedParams = jsonParams.replace(/"/g, '\\"');
+
 ...
+
 const command = `ares-launch --device "${deviceName}" "${appId}" && ares-launch --device "${deviceName}" "${appId}" -p "${cmdEscapedParams}"`;
 
 # The JSON format ({"contentId":"level3"}) is required because ares-launch -p only accepts JSON, not key=value pairs.
