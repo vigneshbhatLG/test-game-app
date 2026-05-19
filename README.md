@@ -3,11 +3,13 @@ This is for testing PC tool.
 
 Once after adding and setting up tv in PC tool :
 
-run:
+run in terminal of your code editor:
 
 ares-package <file_name>
 
 ares-install -d <device_name> <file_name.ipk>
+
+In PC tool:
 
 Add com.game.gamepac --> AppId
 
