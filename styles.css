@@ -1,0 +1,151 @@
+:root {
+	--bg-1: #081f2d;
+	--bg-2: #0f3a4f;
+	--panel: rgba(6, 20, 31, 0.75);
+	--text: #f8f5e4;
+	--accent: #ffd94f;
+	--danger: #ff6b6b;
+	--ok: #7ee787;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+body {
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	color: var(--text);
+	background:
+		radial-gradient(circle at 20% 20%, rgba(255, 217, 79, 0.2), transparent 35%),
+		radial-gradient(circle at 80% 80%, rgba(126, 231, 135, 0.2), transparent 32%),
+		linear-gradient(150deg, var(--bg-1), var(--bg-2));
+	display: grid;
+	place-items: center;
+	padding: 20px;
+}
+
+.game-shell {
+	width: min(980px, 100%);
+	display: grid;
+	gap: 16px;
+}
+
+.hud {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.stat-card {
+	background: var(--panel);
+	border: 1px solid rgba(248, 245, 228, 0.25);
+	border-radius: 10px;
+	padding: 10px 12px;
+	display: grid;
+	gap: 3px;
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+}
+
+.stat-card .label {
+	font-size: 0.78rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.stat-card span:last-child {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--accent);
+}
+
+.level-card span:last-child {
+	color: var(--ok);
+}
+
+.board-wrap {
+	position: relative;
+	width: fit-content;
+	margin: 0 auto;
+	border-radius: 14px;
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.25);
+	border: 1px solid rgba(248, 245, 228, 0.22);
+}
+
+canvas {
+	display: block;
+	width: min(92vw, 672px);
+	height: auto;
+	border-radius: 10px;
+	background: #0d1326;
+}
+
+.overlay {
+	position: absolute;
+	inset: 8px;
+	border-radius: 10px;
+	background: rgba(8, 15, 31, 0.78);
+	display: grid;
+	place-content: center;
+	text-align: center;
+	gap: 8px;
+	padding: 16px;
+}
+
+.overlay h2 {
+	margin: 0;
+	font-size: 1.9rem;
+}
+
+.overlay p {
+	margin: 0;
+	font-size: 1rem;
+	opacity: 0.9;
+}
+
+.hidden {
+	display: none;
+}
+
+.instructions {
+	background: rgba(5, 13, 23, 0.62);
+	border: 1px solid rgba(248, 245, 228, 0.2);
+	border-radius: 10px;
+	padding: 12px;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.instructions p {
+	margin: 4px 0;
+}
+
+.deeplink-status {
+	font-size: 0.9rem;
+	color: var(--accent);
+	opacity: 0.95;
+	word-break: break-word;
+}
+
+@media (max-width: 760px) {
+	.hud {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.stat-card span:last-child {
+		font-size: 1.2rem;
+	}
+
+	.overlay h2 {
+		font-size: 1.4rem;
+	}
+}

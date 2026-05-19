@@ -1,0 +1,7 @@
+{
+  "level1": { "name": "Level 1: Beginner", "difficulty": "Easy" },
+  "level2": { "name": "Level 2: Intermediate", "difficulty": "Medium" },
+  "level3": { "name": "Level 3: Advanced", "difficulty": "Hard" },
+  "boss1": { "name": "Boss Fight 1", "difficulty": "Very Hard" },
+  "final_boss": { "name": "Final Boss Battle", "difficulty": "Extreme" }
+}

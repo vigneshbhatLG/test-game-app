@@ -1,0 +1,12 @@
+{
+	"id": "com.game.gamepac",
+	"version": "1.0.1",
+	"vendor": "Game Pac Studio",
+	"type": "web",
+	"main": "index.html",
+	"title": "Pac Man 5 Levels",
+	"handlesRelaunch": true,
+	"icon": "icon.png",
+	"resolution": "1280x720",
+	"largeIcon": "largeIcon.png"
+}

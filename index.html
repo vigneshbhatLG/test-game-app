@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pac Man - 5 Levels</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<main class="game-shell">
+		<header class="hud">
+			<div class="stat-card">
+				<span class="label">Points</span>
+				<span id="score">0</span>
+			</div>
+			<div class="stat-card">
+				<span class="label">Lives</span>
+				<span id="lives">3</span>
+			</div>
+			<div class="stat-card">
+				<span class="label">High Score</span>
+				<span id="high-score">0</span>
+			</div>
+			<div class="stat-card level-card">
+				<span class="label">Level</span>
+				<span id="level">1 / 5</span>
+			</div>
+		</header>
+
+		<section class="board-wrap">
+			<canvas id="game" width="672" height="504" aria-label="Pac Man game board"></canvas>
+			<div id="overlay" class="overlay hidden">
+				<h2 id="overlay-title">Pac Man</h2>
+				<p id="overlay-message">Press Enter to start.</p>
+			</div>
+		</section>
+
+		<footer class="instructions">
+			<p>Use Arrow Keys or WASD to move. Collect all dots to clear each level.</p>
+			<p>Level 5 is the final level. Difficulty increases every level.</p>
+			<p>Press Enter to start/restart.</p>
+			<p id="deeplink-status" class="deeplink-status">Deep link: waiting for payload.</p>
+		</footer>
+	</main>
+
+	<script src="deeplink.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
