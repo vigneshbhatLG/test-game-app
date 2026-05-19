@@ -4,6 +4,7 @@ This is for testing PC tool.
 Once after adding and setting up tv in PC tool :
 
 run:
+
 ares-package <file_name>
 
 ares-install -d <device_name> <file_name.ipk>
